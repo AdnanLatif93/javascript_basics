@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <p>Lesson 6: Excercise: Rock Papper Scissors</p>
+  <p>
+    <Button
+    onclick="console.log('rock' === myArray[Math.floor(Math.random() * myArray.length)])"
+    >
+      Rock
+    </Button>
+    <Button
+    onclick="console.log('papper' === myArray[Math.floor(Math.random() * myArray.length)])">
+      Papper
+    </Button>
+    <Button
+    onclick="console.log('scissor' === myArray[Math.floor(Math.random() * myArray.length)])"
+    >
+      Scissors
+    </Button>
+    <Button onclick="myFunction()">Click</Button>
+  </p>
+  <script>
+    let  myArray = ['rock','papper','scissor'];
+    myFunction = () => {
+      console.log(myArray);
+      console.log(myArray[Math.floor(Math.random() * myArray.length)]);
+
+    }
+
+  </script>
+</body>
+
+</html

@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <p>Lesson 6: TuTORIAL: Rock Papper Scissors</p>
+  <p>
+    <Button onclick="
+    randomNumber = Math.random();
+    ourMove = 'rock';
+      if(randomNumber >= 0 && randomNumber < 1/3){
+        computerMove = 'rock';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'Tie.'}`)
+      }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        computerMove = 'paper';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you loose.'}`)
+      }else if (randomNumber >= 2/3 && randomNumber <= 1) {
+        computerMove = 'scissors';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you win.'}`)
+      }
+      ">
+      Rock
+    </Button>
+    <Button onclick="
+    randomNumber = Math.random();
+    ourMove = 'paper';
+      if(randomNumber >= 0 && randomNumber < 1/3){
+        computerMove = 'rock';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you Win.'}`)
+      }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        computerMove = 'paper';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'Tie.'}`)
+      }else if (randomNumber >= 2/3 && randomNumber <= 1) {
+        computerMove = 'scissors';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you loose.'}`)
+      }
+    ">
+      Papper
+    </Button>
+    <Button onclick="
+    randomNumber = Math.random();
+    ourMove = 'scissors';
+      if(randomNumber >= 0 && randomNumber < 1/3){
+        computerMove = 'rock';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'You loose.'}`)
+      }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        computerMove = 'paper';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you Win.'}`)
+      }else if (randomNumber >= 2/3 && randomNumber <= 1) {
+        computerMove = 'scissors';
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'Tie.'}`)
+      }
+    ">
+      Scissors
+    </Button>
+  </p>
+  <script>
+    let randomNumber = null;
+    let computerMove = '';
+    let ourMove = ''
+  </script>
+</body>
+
+</html
