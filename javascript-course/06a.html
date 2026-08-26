@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Booleans</title>
+</head>
+
+<body>
+  <p>Lesson 6: Excercise: Booleans and If-statements</p>
+  
+  <p id="text"></p>
+  <script>
+    var hour = 2;
+    var name = 'Adnan'
+    if (hour >= 6 && hour <= 12) {
+      console.log(`Good Morning! ${name}`);
+      document.getElementById('text').innerHTML = `Good Morning! ${name}`;
+    } else if (hour >= 13 && hour <= 17) {
+      console.log(`Good AfterNoon! ${name}`);
+      document.getElementById('text').innerHTML = `Good AfterNoon! ${name}`;
+    } else {
+      console.log(`Good Night! ${name}`);
+      document.getElementById('text').innerHTML = `Good Night! ${name}`;
+    }
+
+  </script>
+</body>
+
+</html
