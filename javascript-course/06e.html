@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Booleans</title>
+</head>
+
+<body>
+  <p>Lesson 6: Excercise: Booleans and If-statements</p>
+
+  <p id="text"></p>
+  <script>
+    //amusement park has discount for 6 years and younger means less than 6 years or seniors like 65 years grater than 65 years
+    //discount only available if it is not a holiday.
+
+    const age = 6;
+    const isHoliday = false;
+
+    // && has a higher priority than || so for
+    // this to work correctly, we need to add
+    // brackets () around the || check to make
+    // sure that it gets done first.
+
+    if ((age <= 6 || age >= 65) && !isHoliday) {
+      console.log(`There is no Holiday today so, Congrates for a Discount!`);
+      document.getElementById('text').innerHTML = `There is no Holiday today so, Congrates for a Discount!`;
+    } else {
+      console.log(`It's a Holiday today So, No Discount!`);
+      document.getElementById('text').innerHTML = `It's a Holiday today So, No Discount!`;
+    }
+
+  </script>
+</body>
+
+</html
