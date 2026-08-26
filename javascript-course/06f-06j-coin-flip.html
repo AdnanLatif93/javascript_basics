@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Booleans and it-statements</title>
+</head>
+
+<body>
+  <p>Lesson 6: Booleans and If-statements</p>
+  <p>Lesson 6: Excercise: coin flip </p>
+
+  <p id="text"></p>
+  <p id="text2"></p>
+  <script>
+
+    const number = Math.random();
+
+    // if (number < 0.5) {
+    //   result = 'head';
+    //   document.getElementById('text').innerHTML = result;
+    // } else {
+    //   result = 'tail';
+    //   document.getElementById('text').innerHTML = result;
+    // }
+
+
+    const result = number < 0.5 ? 'head': 'tail'
+
+    const guess = 'head';
+
+    guess === result ?
+      document.getElementById('text2').innerHTML = `your Guess is ${guess} and result is ${result}. Congrats You WIN !`
+      :
+      document.getElementById('text2').innerHTML = `your Guess is ${guess} and result is ${result}. OoPs You loose !`
+      ;
+
+  </script>
+</body>
+
+</html
