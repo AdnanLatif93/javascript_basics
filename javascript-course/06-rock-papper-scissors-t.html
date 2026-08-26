@@ -9,11 +9,11 @@
   <p>Lesson 6: TuTORIAL: Rock Papper Scissors</p>
   <p>
     <Button onclick="
-    randomNumber = Math.random();
+    randomNumber = Math.random(); // computer randomly pick/select a move.
     ourMove = 'rock';
-      if(randomNumber >= 0 && randomNumber < 1/3){
+      if(randomNumber >= 0 && randomNumber < 1/3){ //compaire the move to get the result.
         computerMove = 'rock';
-        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'Tie.'}`)
+        alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'Tie.'}`) //display the result in a pop up.
       }else if (randomNumber >= 1/3 && randomNumber < 2/3) {
         computerMove = 'paper';
         alert(`you picked ${ourMove}. Computer Picked ${computerMove}. ${'you loose.'}`)
