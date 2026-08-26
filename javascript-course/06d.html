@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Booleans</title>
+</head>
+
+<body>
+  <p>Lesson 6: Excercise: Booleans and If-statements</p>
+  
+  <p id="text"></p>
+  <script>
+    //amusement park has discount for 6 years and younger means less than 6 years or seniors like 65 years grater than 65 years
+    const age = 32;
+  
+    if (age <= 6 || age >= 65) {
+      console.log(`Discount!`);
+      document.getElementById('text').innerHTML = `Discount!`;
+    } else {
+      console.log(`No Discount!`);
+      document.getElementById('text').innerHTML = `No Discount!`;
+    }
+
+  </script>
+</body>
+
+</html
