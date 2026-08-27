@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 7: Function (Exercises)</title>
+</head>
+
+<body>
+  <p>Lesson 07: Function-Excercises</p>
+  <p id="displayText"></p>
+  <script>
+    // create a function 'convert To Farenheit (celsius)' That takes a number in degree celsius and return a number in degree farenheit.
+    // Formula:
+    // Farenheit = (celsius * 9/5) + 32
+    // convert to Farenheit (25) ==> 77.
+
+
+    function convertToFarenheit(celsius) {
+      const farenheit = (celsius * 9 / 5) + 32;
+      document.getElementById('displayText').innerHTML = farenheit;
+      console.log(farenheit);
+    }
+
+    convertToFarenheit(25);
+  </script>
+</body>
+
+</html>
