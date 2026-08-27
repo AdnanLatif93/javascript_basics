@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 7: Function (Exercises)</title>
+</head>
+
+<body>
+  <p>Lesson 07e: Function-Excercises</p>
+  <p id="displayText"></p>
+  <script>
+    //create a function 'convertTemprature(degree, unit)' that takes a number and a unit ('C' or 'F'), and converts it into the other unit.
+    //convertTemprateure(25,'C');
+    //convertTemperature(86,'F');
+    //Note: return a string, and try to reuse the function.
+    
+    function convertToCelsius(fahrenheit){
+      const celsius = (fahrenheit -32 ) * 5 / 9;
+      return celsius;
+    }
+
+    function convertToFahrenheit(celsius){
+      const fahrenheit = (celsius * 9 / 5) + 32;
+      return fahrenheit;
+    }
+
+    function convertTemprature(degree, unit){
+      if(unit === 'F'){
+        const result = convertToCelsius(degree);
+        return `${result} C`;
+      }else if (unit === 'C'){
+        const result = convertToFahrenheit(degree);
+        return `${result} F`;
+      }
+    }
+    console.log(convertTemprature(25, 'C'));
+    console.log(convertTemprature(86, 'F'));
+  </script>
+</body>
+
+</html>
