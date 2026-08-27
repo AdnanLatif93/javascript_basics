@@ -18,10 +18,10 @@
     function convertToFarenheit(celsius) {
       const farenheit = (celsius * 9 / 5) + 32;
       document.getElementById('displayText').innerHTML = farenheit;
-      console.log(farenheit);
+      return farenheit;
     }
 
-    convertToFarenheit(25);
+    console.log(convertToFarenheit(25));
   </script>
 </body>
 
