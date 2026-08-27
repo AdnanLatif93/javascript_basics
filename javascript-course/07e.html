@@ -18,10 +18,10 @@
     function convertToCelsius(fahrenheit) {
       const celsius = (fahrenheit -32) * 5/9;
       document.getElementById('displayText').innerHTML = `the celsius is ${celsius} of ${fahrenheit} fahrenheit`;
-      console.log(fahrenheit);
+      return fahrenheit;
     }
 
-    convertToCelsius(86);
+    console.log(convertToCelsius(86));
   </script>
 </body>
 
