@@ -10,22 +10,22 @@
       console.log(`Cart quantity: ${cartQuantity}`);
     ">Show Quantity</button>
 
-  <button onclick="updateCalculation(1)">Add to Cart</button>
+  <button onclick="updateCartQuanity(1)">Add to Cart</button>
 
-  <button onclick="updateCalculation(2)">+2</button>
+  <button onclick="updateCartQuanity(2)">+2</button>
 
-  <button onclick="updateCalculation(3)">+3</button>
+  <button onclick="updateCartQuanity(3)">+3</button>
 
-  <button onclick="updateCalculation(4)">+4</button>
+  <button onclick="updateCartQuanity(4)">+4</button>
 
-  <button onclick="updateCalculation(5)">+5</button>
+  <button onclick="updateCartQuanity(5)">+5</button>
 
   <!-- vvv This code was changed. vvv -->
-  <button onclick="updateCalculation(-1)">Remove from cart</button>
+  <button onclick="updateCartQuanity(-1)">Remove from cart</button>
 
-  <button onclick="updateCalculation(-2)">-2</button>
+  <button onclick="updateCartQuanity(-2)">-2</button>
 
-  <button onclick="updateCalculation(-3)">-3</button>
+  <button onclick="updateCartQuanity(-3)">-3</button>
   <!-- ^^^ This code was changed. ^^^ -->
 
   <button onclick="
@@ -42,11 +42,13 @@
 
     let cartQuantity = 0;
 
-    function updateCalculation(value) {
+    function updateCartQuanity(value) {
       if (cartQuantity + value > 10) {
-        console.log(`The Cart is full!`);
+        alert(`The Cart is full!`);
+        return;
       } else if (cartQuantity + value < 0) {
-        console.log(`Not enough items in the cart!`);
+        alert(`Not enough items in the cart!`);
+        return;
       } else {
         cartQuantity = cartQuantity + value;
         console.log(cartQuantity)
