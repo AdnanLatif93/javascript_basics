@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Boolean Practice</title>
+</head>
+
+<body>
+  <p>Plese inspet and goto the console tab to see the output.</p>
+  <script>
+    // Level 1. &&, ||
+
+    console.log(true && true); // true.
+    console.log(false && false); // false.
+    console.log(true && false); // false.
+
+    console.log(false || true); // true.
+    console.log(false || false); // false.
+    console.log(true || false); // true.
+
+    console.log(true && true && false); // false.
+    console.log(false || true || false); // true.
+    console.log(true && false || true); // true.
+    console.log(false || false && true); // false.
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
+
+    // Level 2. Comparision <=, >=, &&, ||
+
+    console.log(20 >= 18); // true.
+    console.log(15 >= 18); //false.
+    console.log(20 >= 18 && 20 <= 30); // true.
+    console.log(35 >= 18 && 35 <= 30); //false.
+    console.log(35 <= 10 || 35 >= 30); // true.
+    console.log(20 <= 10 || 20 >= 30); // false.
+    console.log(5 <= 6 || 5 >= 65); // true.
+    console.log(50 <= 6 || 50 >= 65); // false.
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
+
+    // Level 3. multiple variable based comparision and boolens
+    
+    // Actual Weakness
+    // Woh pattren jaha mein repeatedly mistakes kar raha tha.
+
+    console.log('miles' === 'miles' || 'miles' === 'km' || 'miles' === 'ft'); // true.
+    console.log('lbs' === 'miles' || 'lbs' === 'km' || 'lbs' === 'ft'); // false.
+    console.log('miles' === 'miles' && 'miles'  === 'km' && 'miles' === 'ft'); // false.
+    console.log('lbs' !== 'miles' || 'lbs' !== 'km' || 'lbs' != 'ft'); // true
+    console.log('miles' !== 'miles' || 'miles' !== 'km' || 'miles' !== 'ft'); // true
+    console.log('lbs' !== 'miles' || 'lbs' !== 'km' || 'lbs' !== 'ft'); // true
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
+
+    // Level 4 - ! operator practice.
+    
+    {
+      const isHoliday = false;
+      console.log(!isHoliday); // true;
+    }
+
+    {
+      const isHoliday = true;
+      console.log(!isHoliday); // false;
+    }
+
+    {
+      const age = 20;
+      console.log(!(age >= 18)); // false;
+    }
+
+    {
+      const age = 15;
+      console.log(!(age >= 18)); // true;
+    }
+
+    {
+      const isLoggedIn = true;
+      console.log(!isLoggedIn); // false;
+    }
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
+    
+    // Level 5. Truthy/Falsy
+
+    {
+      const name = '';
+      if(name){console.log('yes');} // falsy - not print 
+    }
+
+    {
+      const name = 'Adnan';
+      if(name){console.log('yes');} // truthy - print
+    }
+
+    {
+      const value = 0;
+      if(value){console.log('yes');} // falsy - not print
+    }
+
+    {
+      const value = 10;
+      if(value){console.log('yes');} // truthy - print
+    }
+
+    {
+      const value = undefined;
+      if(value){console.log('yes');} // falsy - not print
+    }
+
+    {
+      const value = undefined;
+      if(!value){console.log('yes')} // truthy - print
+    }
+
+    // --------------------------------------------------------------------------------------------------------------------------------------
+
+    // Level 6. Real-world conditions
+    // Ab tumhari actual target skill.
+    // pehle requirement read karo.
+    // phir Boolean expression banao.
+
+    //Q-37. (AGE) Agar age 18 ya us se zyada AND 60 yan us kam hai - to true.
+    {
+      const age = 25;
+      if(age >= 18 && age <= 60){
+        console.log('Q.37 - this condition is true and this statement will execuded');
+      }
+    }
+
+    //Q-38. (DISCOUNT) Discount tab milega jab customer ki age 6 yaan us se kam ho OR 65 yan us se zyada.
+    {
+      const age = 70;
+      if(age  <= 6 || age >= 65){
+        console.log('Q.38 - this condition is true. customer will get the discount.');
+      }
+    }
+
+    //Q-39. (HOLIDAY) Discount tab milega jab customer eligible ho AND aaj holiday na ho.
+    {
+      const age =70;
+      const isHoliday = false;
+      if((age <= 6 || age >= 65) && !isHoliday){
+        console.log('Q.39 - this condition will gives us true, so this statement will execute.');
+      }
+    }
+
+    //Q-40. (INVALID UNIT) unit invalid hai agar woh 'miles', 'km', 'ft' mein se koi bhi nahi hai.
+    {
+      const unit = 'lbs';
+      if(unit !== 'miles' && unit !== 'km' && unit !== 'ft'){
+         console.log(`Q-40 - This statement is also true, so it will print: INVALID UNIT ${unit}.`);
+      }
+    }
+
+    //Q-41. (INVALID UNIT) unit invalid hai agr woh 'miles', 'km', 'ft' mein se koi bhi nahi (requirement is same as above).
+    {
+      const unit = 'miles';
+      if(unit !== 'miles' && unit !== 'km' && unit !== 'ft'){
+        console.log(`Q.41 - This condition is false, is py mujhy doubt hai k yeh kiya hai. lakin mein is ko invalid kaisy keh sakta hun.`)
+        //unit to imile hai aur woh condition mein bhi majood hai by shaq true ho yaan false hai lakin condition OR lagani hai yaan AND
+        //lahaza yeh invalid condition hi nahi hai. yeh aik valid condition hai. kio miles to exist karta hai.
+      }
+    }
+    
+    //---------------------------------------------------------------------------------------------------------------------------------------
+    // Level 7. Full Decomposition
+    // Ab exactly woh skill practice karni hai jo develop karni hai.
+
+    //Q.42. 
+    {
+      const age = 6;
+      const isHoliday = false;
+
+      if( (age <= 6 || age >=65) && !isHoliday){
+        console.log(`Q.42. condition bani gi true && true. So yeh statement execute ho gi.`)
+      }
+    }
+
+    //Q.43.
+    {
+      const age = 40;
+      const isHoliday = false;
+
+      if((age <= 6 || age >= 65) && !isHoliday){
+        console.log('Q.43. this statement will not execute because false && true => false. That is why.');
+      }
+    }
+
+    //Q.44.
+    {
+      const age = 70;
+      const isHoliday = true;
+
+      if((age <= 6 || age >= 65) && !isHoliday){
+        console.log('This statement will not rendered. Because of the conditioin execution. true && false ==> false');
+      }
+    }
+
+    //Q.45. Most Important
+    {
+      const from = 'miles';
+      const to = 'km';
+      if((from === 'miles' || from === 'km' || from === 'ft') && (to === 'miles' || to === 'km' || to === 'ft') ){
+        console.log('Q.45. yeh statement execute hogi. kio true && true ===> true');
+      }
+    }
+
+    //Q.46.
+    {
+      const from = 'lbs';
+      const to = 'km';
+      if((from === 'miles' || from === 'km' || from === 'ft') && (to === 'miles' || to === 'km' || to === 'ft')){
+        console.log('This condition will not execute. Because false && true ===> false');
+      }
+    }
+
+    //Q.47. (INVALID LOGIC) wrong-looking condition
+    {
+      const from = 'miles';
+      if(from !== 'miles' && from !== 'km' && from !== 'ft'){
+        //false && true && true
+        console.log('Q.47. This statement will not trigger due to if condition is false');
+      }
+    }
+
+    //Q.48. Previous attempted mistake - excercise practice.
+    {
+      const from = 'miles';
+      if(from !== 'miles' || from !== 'km' || from !== 'ft'){
+        //false || true || true
+        console.log('Q.48. This condition will executed due to if condition is true.');
+      }
+    }
+
+    //---------------------------------------------------------------------------------------------------------------------------------------
+    // Level 8. Programming situation. Ab Actual Code ---- Complete the condition
+
+    // Q.49. Agr CartQuantity 10 se zyada ho jaye to "cart is full".
+    {
+      let cartQuantity = 8;
+      let value = 3;
+      if(cartQuantity + value > 10){
+        console.log('this condition will execute because 11 > 10: Lahaza "Cart is full" statement show ho jay gi.');
+      }
+    }
+
+    //Q.50. Agar cartQuantity 0 se neechy chali jaye to "Not enough space".
+    {
+      let cartQuantity = 2;
+      let value = -3;
+
+      if(cartQuantity + value < 0){
+        console.log('This condition will also execute. Because 2-3 = -1 jo k zero se neechy hai. "Cart is full".');
+      }
+    }
+
+    //Final challange.
+    {
+      const age = 65;
+      const isHoliday = false;
+      const unit = 'miles';
+
+      if((age <= 6 || age >= 65) && !isHoliday && (unit === 'miles' || unit === 'km' || unit === 'ft')){
+        //true && true && true.
+        console.log('Final Challange! This condition will execute.');
+        console.log('Discount Available!');
+      }else{
+        console.log('No discount');
+      }
+    }
+  </script>
+</body>
+
+</html>
