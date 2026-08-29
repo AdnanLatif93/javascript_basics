@@ -45,10 +45,10 @@
     function updateCartQuanity(value) {
       if (cartQuantity + value > 10) {
         alert(`The Cart is full!`);
-        return;
+        return; // this empty return send 'undefined' as a value back to the function call. And the function ends immediately here.
       } else if (cartQuantity + value < 0) {
         alert(`Not enough items in the cart!`);
-        return;
+        return; // this empty return send 'undefined' as a value back to the function call. And the function ends immediately here.
       } else {
         cartQuantity = cartQuantity + value;
         console.log(cartQuantity)
