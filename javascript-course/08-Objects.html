@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Objects</title>
+</head>
+
+<body>
+  <p>08: Objects</p>
+  <script>
+    // An group of multiple values together.
+    const product = {};
+    // {} if these backets assign to a variable along with their property and value. Then this is an Object. 
+    product = {
+      name: 'socks', // property : value;
+      price: 999
+    }
+
+    //console log the product.
+    console.log(product);
+    // An object is an other type of variable.
+    //typeOf the variable
+    console.log(typeOf(product)); // output: Object
+
+    // Access a value of and Object.
+    // we can access a value of an object by typing the object's name then dot-notation and then a property name.
+    console.log('product.name');
+
+    // Update or Change a value inside the Object.
+    // We can change the value of an object by using the property and dot-notaion.
+    product.name = "somethingNew value";
+    console.log(product);
+    // We can group multiple value together and then access and change the value using the properties on the left.
+
+    // Syntax of an object:
+    // starts and ends with the curly brackets - inside the object we can put multiple values - for each value - the code on the left is called property. { Property : value }; We seperate the property and value with the colon. Which is called property-value pair.
+    // We can have multiple property-value pairs in an Object an we seperated them with a comma. {p:v,p:v}.
+
+    // UNDEFINED: 
+    // When we try to access an non exist property. then the value will be undefined.
+    console.log('product.nonExistValue'); // outcome: undefined.
+
+    // ADD a new Property/value to an Object.
+    // Object's name then dot-notaion then newProperty and make this equal to a 'newValue'.
+    product.newProperty = 'newValue';
+    console.log(product);
+
+    // Remove from an Object.
+    // delete -> special reserved key word then Object variable name then dot-notation then the property name.
+    console.log(delete product.newProperty);
+    console.log(product);
+
+    // Why we use an Object?
+    // to manage multiple properties in a single group for a specific object in a single {} instead of creating bunch of variables individually.
+
+
+    // We create multiple values together.
+    // we use multiple values together.
+  </script>
+</body>
+
+</html>
